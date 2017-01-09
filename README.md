@@ -1,17 +1,10 @@
 Dependencies
 ============
 
-Python over version 3
----------------------
-
-qrcode
-------
-
-PIL
----
-
-numpy
------
+-   Python over version 3
+-   qrcode
+-   PIL
+-   numpy
 
 Install
 =======
