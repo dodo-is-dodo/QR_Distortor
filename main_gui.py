@@ -42,7 +42,7 @@ class RightFrame(Frame, ):
     def initUI(self):
 
         # self.pack(fill=BOTH, expand=True)
-        self.pack(side=RIGHT, fill=X)
+        self.pack(side=RIGHT, fill=X, expand=True)
 
 
         frame1 = Frame(self)
@@ -62,7 +62,7 @@ class RightFrame(Frame, ):
         lbl2.pack(side=LEFT, padx=5, pady=5)
         scale_x = Scale(frame2, from_=-100, to=100,
                         command=self.onScale_x, orient=HORIZONTAL)
-        scale_x.pack(side=RIGHT, padx=15)
+        scale_x.pack(side=RIGHT, padx=15, fill=X, expand=True)
         self.x_pos = DoubleVar()
 
         frame3 = Frame(self)
@@ -71,7 +71,7 @@ class RightFrame(Frame, ):
         lbl3.pack(side=LEFT, padx=5, pady=5)
         scale_y = Scale(frame3, from_=-100, to=100,
                         command=self.onScale_y, orient=HORIZONTAL)
-        scale_y.pack(side=RIGHT, padx=15)
+        scale_y.pack(side=RIGHT, padx=15, expand=True, fill=X)
         self.y_pos = DoubleVar()
 
         frame4 = Frame(self)
@@ -117,7 +117,7 @@ class RightFrame(Frame, ):
 def main():
     root = Tk()
     root.title('QR_distortor')
-    w = 1000
+    w = 1200
     h = 750
 
     sw = root.winfo_screenwidth()

@@ -15,7 +15,7 @@ def find_coeffs(pb, pa):
 
 def find_new_xy(w, h, x_pos, y_pos):
     wide_range = [-100, 100]
-    narrow_range = [-0.3, 0.3]
+    narrow_range = [-0.15, 0.15]
     x_coeff = np.interp(x_pos, wide_range, narrow_range)
     y_coeff = np.interp(y_pos, wide_range, narrow_range)
     # print(x_coeff)
