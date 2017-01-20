@@ -1,6 +1,7 @@
 import qrcode
 import csv
 import collections
+import random, string
 
 version_map = collections.OrderedDict()
 
@@ -14,6 +15,9 @@ with open("./size.csv", 'r') as csvfile:
         else:
             version_map[version].append(int(row[3]))
         index += 1
+
+def randomword(length):
+   return ''.join(random.choice(string.ascii_letters) for i in range(length))
 
 def qr_search(size, error_correction):
     error_map = {
@@ -41,7 +45,8 @@ def make_basic_qr(size, error_correction):
         box_size = 10,
         border = 4,
     )
-    qr.add_data("SKKU")
+    data = randomword(size)
+    qr.add_data(data)
     qr.make(fit=True)
 
     img = qr.make_image()
